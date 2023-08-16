@@ -5,7 +5,8 @@ namespace Example.Scripts
 		public class Character
 		{
 			public int _attack;
-			public int _health;
+			
+			private int _health;
 
 			public int Health { get; set; }
 

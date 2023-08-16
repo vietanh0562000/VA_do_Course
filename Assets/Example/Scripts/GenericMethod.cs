@@ -15,8 +15,8 @@
 
 		public void Execute()
 		{
-			Enemy enemy1 = FindIndentifierObj(Enemies, 1);
-			Decor decor1 = FindIndentifierObj(Decors, 1);
+			Enemy enemy1 = FindIndentifierObj<Enemy>(Enemies, 1);
+			Decor decor1 = FindIndentifierObj<Decor>(Decors, 1);
 		}
 	}
 
