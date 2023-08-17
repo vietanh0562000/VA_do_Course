@@ -37,17 +37,41 @@
 	{
 		private         string fname = "Thang";
 		private         string lname = "Nguyen";
-		
 		public override string ToString() => $"{fname} {lname}".Trim();
-
-		public Vector3       one;
-		public Vector3 two;
-
-		private Func<Vector3, Vector3> plus = x => x + x;
-
+		
+		
+		private Action      normalAction;
+		
 		public void Main()
 		{
-			one = Vector3.one;
+			normalAction = ExecuteNormal;
+			void ExecuteNormal()
+			{
+				Debug.Log("this is normal action");
+			}
+			
+			//same with above
+			normalAction = () => Debug.Log("this is normal action");
+			normalAction?.Invoke();
 		}
+		
+		// On class exercise
+		// private Action<param> powAction;
+		// public void MainInput()
+		// {
+		// 	powAction = ExecutePow;
+		// 	void ExecutePow(param)
+		// 	{
+		// 		//TODO : calculate sum of 2 interger and log
+		// 	}
+		// 	
+		// 	//use lambda
+		// 	powAction = (param) =>
+		// 	{
+		// 		//TODO : calculate sum of 2 interger and log
+		// 	};
+		// 	
+		// 	powAction?.Invoke(input);
+		// }
 	}
 }
