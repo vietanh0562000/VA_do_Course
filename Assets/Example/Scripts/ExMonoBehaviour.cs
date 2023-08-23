@@ -1,5 +1,6 @@
 ﻿namespace Jackal
 {
+	using System;
 	using UnityEngine;
 
 	public class ExMonoBehaviour : MonoBehaviour
@@ -58,6 +59,11 @@
 		public void DoSomething()
 		{
 			Debug.Log($"DoSomething {Time.frameCount}");
+		}
+
+		private void OnPreRender()
+		{
+			Debug.Log($"OnPreRender {Time.frameCount}");
 		}
 	}
 }
